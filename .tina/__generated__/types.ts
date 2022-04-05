@@ -61,6 +61,7 @@ export type Connection = {
 
 export type Query = {
   __typename?: 'Query';
+  getOptimizedQuery?: Maybe<Scalars['String']>;
   getCollection: Collection;
   getCollections: Array<Collection>;
   node: Node;
@@ -71,6 +72,11 @@ export type Query = {
   getPageList: PageConnection;
   getPostDocument: PostDocument;
   getPostList: PostConnection;
+};
+
+
+export type QueryGetOptimizedQueryArgs = {
+  queryString: Scalars['String'];
 };
 
 
@@ -95,6 +101,8 @@ export type QueryGetDocumentListArgs = {
   after?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Float']>;
   last?: InputMaybe<Scalars['Float']>;
+  sort?: InputMaybe<Scalars['String']>;
+  filter?: InputMaybe<DocumentFilter>;
 };
 
 
@@ -108,6 +116,8 @@ export type QueryGetPageListArgs = {
   after?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Float']>;
   last?: InputMaybe<Scalars['Float']>;
+  sort?: InputMaybe<Scalars['String']>;
+  filter?: InputMaybe<PageFilter>;
 };
 
 
@@ -121,6 +131,35 @@ export type QueryGetPostListArgs = {
   after?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Float']>;
   last?: InputMaybe<Scalars['Float']>;
+  sort?: InputMaybe<Scalars['String']>;
+  filter?: InputMaybe<PostFilter>;
+};
+
+export type RichTextFilter = {
+  startsWith?: InputMaybe<Scalars['String']>;
+  eq?: InputMaybe<Scalars['String']>;
+  exists?: InputMaybe<Scalars['Boolean']>;
+};
+
+export type PageFilter = {
+  body?: InputMaybe<RichTextFilter>;
+};
+
+export type StringFilter = {
+  startsWith?: InputMaybe<Scalars['String']>;
+  eq?: InputMaybe<Scalars['String']>;
+  exists?: InputMaybe<Scalars['Boolean']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+export type PostFilter = {
+  title?: InputMaybe<StringFilter>;
+  body?: InputMaybe<StringFilter>;
+};
+
+export type DocumentFilter = {
+  page?: InputMaybe<PageFilter>;
+  post?: InputMaybe<PostFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -155,6 +194,8 @@ export type CollectionDocumentsArgs = {
   after?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Float']>;
   last?: InputMaybe<Scalars['Float']>;
+  sort?: InputMaybe<Scalars['String']>;
+  filter?: InputMaybe<DocumentFilter>;
 };
 
 export type DocumentNode = PageDocument | PostDocument;

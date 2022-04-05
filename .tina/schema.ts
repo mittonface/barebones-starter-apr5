@@ -1,4 +1,4 @@
-import { defineSchema, defineConfig } from "tinacms";
+import { defineConfig, defineSchema } from "tinacms";
 
 // Tina schema
 
@@ -78,4 +78,9 @@ export const tinaConfig = defineConfig({
     return cms;
   },
   apiURL,
+  tinaioConfig: {
+    identityApiUrlOverride: "https://bm-identity.tinajs.dev",
+    contentApiUrlOverride: "https://bm-content.tinajs.dev",
+    frontendUrlOverride: "http://localhost:3002",
+  },
 });
