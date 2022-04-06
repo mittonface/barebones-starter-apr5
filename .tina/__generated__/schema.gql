@@ -74,6 +74,7 @@ input StringFilter {
 
 input PostFilter {
   title: StringFilter
+  title2: StringFilter
   body: StringFilter
 }
 
@@ -133,6 +134,7 @@ type PageConnection implements Connection {
 
 type Post {
   title: String
+  title2: String
   body: String
 }
 
@@ -177,6 +179,7 @@ input PageMutation {
 
 input PostMutation {
   title: String
+  title2: String
   body: String
 }
 

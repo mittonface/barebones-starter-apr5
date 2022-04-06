@@ -32,6 +32,11 @@ export default defineSchema({
         },
         {
           type: "string",
+          label: "Title2",
+          name: "title2",
+        },
+        {
+          type: "string",
           label: "Blog Post Body",
           name: "body",
           isBody: true,
