@@ -32,8 +32,8 @@ export default defineSchema({
         },
         {
           type: "string",
-          label: "Title2",
-          name: "title2",
+          label: "Title3",
+          name: "title3",
         },
         {
           type: "string",

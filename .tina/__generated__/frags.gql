@@ -4,6 +4,6 @@ fragment PageParts on Page {
 
 fragment PostParts on Post {
   title
-  title2
+  title3
   body
 }

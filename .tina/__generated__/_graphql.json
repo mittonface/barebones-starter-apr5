@@ -1175,7 +1175,7 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "title2"
+            "value": "title3"
           },
           "type": {
             "kind": "NamedType",
@@ -1921,7 +1921,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "title2"
+            "value": "title3"
           },
           "arguments": [],
           "type": {
@@ -2703,7 +2703,7 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "title2"
+            "value": "title3"
           },
           "type": {
             "kind": "NamedType",
