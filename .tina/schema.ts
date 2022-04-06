@@ -48,7 +48,7 @@ export default defineSchema({
 
 // Tina config
 
-const branch = "main";
+const branch = "foo";
 // When working locally, hit our local filesystem.
 // On a Vercel deployment, hit the Tina Cloud API
 const apiURL =
