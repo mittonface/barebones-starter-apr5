@@ -79,8 +79,8 @@ export const tinaConfig = defineConfig({
   },
   apiURL,
   tinaioConfig: {
-    identityApiUrlOverride: "https://bm-identity.tinajs.dev",
-    contentApiUrlOverride: "https://bm-content.tinajs.dev",
-    frontendUrlOverride: "http://localhost:3002",
+    identityApiUrlOverride: "https://pr1517-identity.tinajs.dev",
+    contentApiUrlOverride: "https://pr1517-content.tinajs.dev",
+    frontendUrlOverride: "https://pr1517-app.tinajs.dev",
   },
 });
